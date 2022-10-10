@@ -1,6 +1,10 @@
+import SignUpComponent from "./components/signup/SignUpComponent";
+
 function App() {
   return (
-    <h1>hi</h1>
+    <>
+        <SignUpComponent />
+    </>
   );
 }
 
