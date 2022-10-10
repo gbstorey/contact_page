@@ -1,5 +1,6 @@
 import SignUpInput from "./SignUpInput"
 import TermsOfService from "./TermsOfService"
+import {Auth} from 'aws-amplify'
 
 export default function SignUpComponent() {
     return (
@@ -18,6 +19,12 @@ export default function SignUpComponent() {
                     className="w-full text-center py-3 rounded bg-green-600 text-white hover:bg-green-700 focus:outline-none my-1"
                 >Create Account</button>
 
+                <button 
+                    className="w-full text-center py-3 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none"
+                    onClick={() => Auth.federatedSignIn()}>
+                    OAuth2.0 Sign In
+                </button>
+
                 <TermsOfService />
                 
             </div>
@@ -28,7 +35,9 @@ export default function SignUpComponent() {
                     <span> Log in.</span>
                 </a>
             </div>
+
         </div>
+
     </div>
     )
 }
