@@ -1,9 +1,10 @@
-import SignUpComponent from "./components/signup/SignUpComponent";
+import { Link } from "react-router-dom";
+import Navbar from "./components/home/Navbar";
 
 function App() {
   return (
     <>
-        <SignUpComponent />
+      <Navbar />
     </>
   );
 }
